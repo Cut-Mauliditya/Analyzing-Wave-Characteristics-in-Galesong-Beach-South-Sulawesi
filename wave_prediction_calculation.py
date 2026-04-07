@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import matplotlib.cm as cm
 
 
-ds = pd.read_excel('data_sortir.xlsx')
+ds = pd.read_excel('data_dist.xlsx')
 
 ws = ds['WS'].values    # wind speed
 wd = ds['WD'].values    # wind direction
@@ -149,7 +149,7 @@ Monthly Wave Height and Period
 
 '''
 
-df = pd.read_excel('data_sortir.xlsx')
+df = pd.read_excel('data_dist.xlsx')
 year = df['YEAR']
 month = df['MO'].astype(int)
 
