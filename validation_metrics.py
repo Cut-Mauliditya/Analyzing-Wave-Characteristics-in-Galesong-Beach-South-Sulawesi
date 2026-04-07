@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import matplotlib.cm as cm
 
 
-ds = pd.read_excel('data_sortir.xlsx')
+ds = pd.read_excel('data_dist.xlsx')
 
 # obs data
 wh = ds['h'].values     # wave height
