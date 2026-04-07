@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import matplotlib.cm as cm
 import seaborn as sns
 
-ds = pd.read_excel('data_sortir.xlsx')
+ds = pd.read_excel('data_dist.xlsx')
 
 # obs data
 wh = ds['h'].values     # wave height
@@ -71,14 +71,12 @@ weibull distribution
 
 '''
 
-d = pd.read_excel('data_weibul.xlsx')
-
-hsw = d['HSW'].values
-tsw = d['TSW'].values
-hw = d['HW'].values
-tw = d['TW'].values
-hnw = d['HNW'].values
-tnw = d['TNW'].values
+hsw = ds['HSW'].values
+tsw = ds['TSW'].values
+hw = ds['HW'].values
+tw = ds['TW'].values
+hnw = ds['HNW'].values
+tnw = ds['TNW'].values
 
 hsw = hsw[np.isfinite(hsw)]
 tsw = tsw[np.isfinite(tsw)]
@@ -111,8 +109,8 @@ fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(8, 4))
 sns.kdeplot(hsw, ax=ax1, label='H SW', fill=True)
 sns.kdeplot(hw, ax=ax1, label='H W', fill=True)
 sns.kdeplot(hnw, ax=ax1, label='H NW', fill=True)
-ax1.set_xlabel('(m)', fontsize=9)
-ax1.set_ylabel('Kepadatan Tinggi Gelombang', fontsize=9)
+ax1.set_xlabel('H (m)', fontsize=9)
+ax1.set_ylabel('Density', fontsize=9)
 ax1.tick_params(axis='x', labelsize=7)
 ax1.tick_params(axis='y', labelsize=7)
 ax1.legend(loc='upper right', fontsize=7)
@@ -120,8 +118,8 @@ ax1.legend(loc='upper right', fontsize=7)
 sns.kdeplot(tsw, ax=ax2, label='T SW', fill=True)
 sns.kdeplot(tw, ax=ax2, label='T W', fill=True)
 sns.kdeplot(tnw, ax=ax2, label='T NW', fill=True)
-ax2.set_xlabel('(s)', fontsize=9)
-ax2.set_ylabel('Kepadatan Periode Gelombang', fontsize=9)
+ax2.set_xlabel('P (s)', fontsize=9)
+ax2.set_ylabel('Density', fontsize=9)
 ax2.tick_params(axis='x', labelsize=7)
 ax2.tick_params(axis='y', labelsize=7)
 ax2.legend(loc='upper right', fontsize=7)
