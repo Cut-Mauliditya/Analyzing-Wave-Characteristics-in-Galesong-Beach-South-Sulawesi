@@ -34,4 +34,6 @@ Plots included:
 
 #####
 #####
-See [Analyzing Wave Characteristic-Result.pdf](https://github.com/user-attachments/files/26529197/Analyzing.Wave.Characteristic-Result.pdf) for the full report.
+My undergraduate thesis on wave modeling is available here:
+"Seasonal wave dynamics and model validation at Galesong Beach, South Sulawesi"
+https://doi.org/10.12912/27197050/204858
